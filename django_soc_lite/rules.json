@@ -339,18 +339,6 @@
         },
         "impact":"4"
       },
-      
-      {
-        "id":"37",
-        "rule":"(?:\\<base\\s+)|(?:<!(?:element|entity|\\[CDATA))",
-        "description":"base href injections and XML entity injections",
-        "tags":{
-          "tag":[
-            "id"
-          ]
-        },
-        "impact":"5"
-      },
       {
         "id":"38",
         "rule":"(?:\\<[\\\/]?(?:[i]?frame|applet|isindex|marquee|keygen|script|audio|video|input|button|textarea|style|base|body|meta|link|object|embed|param|plaintext|xm\\w+|image|im(?:g|port)))",
@@ -449,17 +437,6 @@
           ]
         },
         "impact":"7"
-      },
-      {
-        "id":"47",
-        "rule":"(?:[\\d\\W]\\s+as\\s*[\"\\w]+\\s*from)|(?:^[\\W\\d]+\\s*(?:union|select|create|rename|truncate|load|alter|delete|update|insert|desc))|(?:(?:select|create|rename|truncate|load|alter|delete|update|insert|desc)\\s+(?:(?:group_)concat|char|load_file)\\s?\\(?)|(?:end\\s*\\);)|(\"\\s+regexp\\W)|(?:[\\s(]load_file\\s*\\()",
-        "description":"concatenated basic SQL injection and SQLLFI attempts",
-        "tags":{
-          "tag":[
-            "sqli"
-          ]
-        },
-        "impact":"5"
       },
       {
         "id":"48",
@@ -572,73 +549,6 @@
         "impact":"5"
       },
       {
-        "id":"58",
-        "rule":"(?:@[\\w-]+\\s*\\()|(?:]\\s*\\(\\s*[\"!]\\s*\\w)|(?:<[?%](?:php)?.*(?:[?%]>)?)|(?:;[\\s\\w|]*\\$\\w+\\s*=)|(?:\\$\\w+\\s*=(?:(?:\\s*\\$?\\w+\\s*[(;])|\\s*\".*\"))|(?:;\\s*\\{\\W*\\w+\\s*\\()",
-        "description":"code injection attempts 1\/3",
-        "tags":{
-          "tag":[
-            "lfi"
-          ]
-        },
-        "impact":"7"
-      },
-      {
-        "id":"59",
-        "rule":"(?:(?:[;]+|(<[?%](?:php)?)).*(?:define|eval|file_get_contents|include|require|require_once|set|shell_exec|phpinfo|system|passthru|preg_\\w+|execute)\\s*[\"(@])",
-        "description":"code injection attempts 2\/3",
-        "tags":{
-          "tag":[
-            "lfi"
-          ]
-        },
-        "impact":"7"
-      },
-      {
-        "id":"60",
-        "rule":"(?:(?:[;]+|(<[?%](?:php)?)).*[^\\w](?:echo|print|print_r|var_dump|[fp]open))|(?:;\\s*rm\\s+-\\w+\\s+)|(?:;.*{.*\\$\\w+\\s*=)|(?:\\$\\w+\\s*\\[\\]\\s*=\\s*)",
-        "description":"code injection attempts 3\/3",
-        "tags":{
-          "tag":[
-            "lfi"
-          ]
-        },
-        "impact":"7"
-      },
-
-      {
-        "id":"63",
-        "rule":"(?:[\\w.-]+@[\\w.-]+%(?:[01][\\db-ce-f])+\\w+:)",
-        "description":"common mail header injections",
-        "tags":{
-          "tag":[
-            "id"
-          ]
-        },
-        "impact":"5"
-      },
-      {
-        "id":"64",
-        "rule":"(?:\\.pl\\?\\w+=\\w?\\|\\w+;)|(?:\\|\\(\\w+=\\*)|(?:\\*\\s*\\)+\\s*;)",
-        "description":"perl echo shellcode injection and LDAP vectors",
-        "tags":{
-          "tag":[
-            "rfe"
-          ]
-        },
-        "impact":"5"
-      },
-      {
-        "id":"65",
-        "rule":"(?:(^|\\W)const\\s+[\\w\\-]+\\s*=)|(?:(?:do|for|while)\\s*\\([^;]+;+\\))|(?:(?:^|\\W)on\\w+\\s*=[\\w\\W]*(?:on\\w+|alert|eval|print|confirm|prompt))|(?:groups=\\d+\\(\\w+\\))|(?:(.)\\1{128,})",
-        "description":"basic XSS DoS attempts",
-        "tags":{
-          "tag":[
-            "dos"
-          ]
-        },
-        "impact":"5"
-      },
-      {
         "id":"68",
         "rule":"(?:[\\s\\\/\"]+[-\\w\\\/\\\\\\*]+\\s*=.+(?:\\\/\\s*>))",
         "description":"attribute breaking injections including obfuscated attributes",
@@ -697,15 +607,6 @@
           "tag":[
             "files"
           ]
-        },
-        "impact":"4"
-      },
-      {
-        "id":"75",
-        "rule":"(?:(((.*)\\%[c|d|i|e|f|g|o|s|u|x|p|n]){8}))",
-        "description":"a format string attack",
-        "tags":{
-          "tag":["format string"]
         },
         "impact":"4"
       },
