@@ -6,8 +6,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="django-soc-lite",
-    version="0.0.5",
+    name="django_soc_lite",
+    version="0.0.1",
     description="A Powerfull Django plugin to detect and logging Basic Web-based Attack.",
     install_requires=[
         "click==6.6",

@@ -1,11 +1,11 @@
-# django-soc-lite #
+# django_soc_lite #
 
 * A security middleware for Django app to Detect OWASP Top Basic and generate report in your ThreatEquation dashboard.
 
 
 ### with ``pip`` ###
     
-    pip install django-soc-lite
+    pip install django_soc_lite
 
 
 ### Configure to Your APP ###
