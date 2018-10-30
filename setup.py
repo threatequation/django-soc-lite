@@ -7,11 +7,11 @@ with open("README.md", "r") as fh:
 
 setup(
     name="django_soc_lite",
-    version="0.0.1",
+    version="0.0.2",
     description="A Powerfull Django plugin to detect and logging Basic Web-based Attack.",
     install_requires=[
         "click==6.6",
-        "requests==2.11.1",
+        "requests==2.20.0",
         "requests-cache==0.4.13",
         'shellescape==3.4.1'
     ],
