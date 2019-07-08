@@ -1,5 +1,4 @@
 from ..threat.middleware import *
-import bleach
 
 from .. import url_coder, rule_checker, HTML_Escape
 from ..threat.log_generator import send

@@ -1,20 +1,10 @@
 from ..threat.middleware import *
-import bleach
 from .. import url_coder, rule_checker, HTML_Escape
 from ..threat.log_generator import send
 
 def send_log(request, query, description):
     send(request, "SQLI", str(query), request.path, 'escaping, encoding, white/black list verification', description)
 
-
-def purifier(q):
-    q = bleach.clean(q)
-    if not isinstance(q, str):
-        q = q.encode("utf-8")
-    #q = HTML_Escape.XSSEncode(q)                    
-    return q
-    
-    
 
 class SQLMiddleware(object):
     def __init__(self, request):
